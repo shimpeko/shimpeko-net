@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+    @apply underline underline-offset-4 text-sky-600 hover:text-sky-800 visited:text-purple-600
+ }
+

@@ -1,0 +1,3 @@
+name: shimpeko-net
+description: Infrastructure for shimpeko-net
+runtime: nodejs
