@@ -17,7 +17,7 @@ export default function Home() {
       <div className='max-w-screen-lg mx-auto px-0 md:px-4 lg:px-0 my-0 md:my-16'>
         <div className='aspect-video relative'>
         <Image
-          src={`/cover_photo.webp`}
+          src={`/lel_2022.webp`}
           fill
           alt="LEL 2022"
           className="object-cover md:rounded-md"
