@@ -15,6 +15,10 @@ export async function getPostData(id: string): Promise<object> {
   const converter = new showdown.Converter({
     metadata: true,
     headerLevelStart: 2,
+    simpleLineBreaks: true,
+    tables: true,
+    strikethrough: true,
+    ghCodeBlocks: true,
   });
   const contentHtml = converter.makeHtml(fileContents);
   const metadata = converter.getMetadata() as showdown.Metadata;
