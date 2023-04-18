@@ -21,10 +21,10 @@ export async function getStaticProps({ params }: any) {
 export default function Post({ postData }: any) {
   return (
     <>
-    <header className='max-w-screen-lg mx-auto flex'><div className='text-gray-400 mx-auto my-4 md:my-8'>shimpeko's memo</div></header>
+    <header className='max-w-screen-lg mx-auto flex'><div className='text-gray-400 mx-auto my-4 md:my-8'>shimpeko's note</div></header>
     <article className='max-w-screen-lg mx-auto px-4'>
-      <h1 className='text-3xl md:text-4xl mt-8 md:mt-16 mb-2 md:mb-4 font-semibold'>{postData.title}</h1>
-      <time className="block text-xs md:text-sm mb-8 md:mb-16 text-gray-400">{postData.published_time}</time>
+      <h1 className='text-3xl md:text-4xl mt-8 md:mt-12 mb-2 md:mb-4 font-semibold'>{postData.title}</h1>
+      <time className="block text-xs md:text-sm mb-8 md:mb-12 text-gray-400">{postData.published_time}</time>
       <div className='prose prose-base md:prose-lg' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </article>
     </>
