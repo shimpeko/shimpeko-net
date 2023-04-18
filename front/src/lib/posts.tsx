@@ -12,9 +12,12 @@ export function getAllPostIds(): string[] {
 export async function getPostData(id: string): Promise<object> {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  const converter = new showdown.Converter({metadata: true, headerLevelStart: 2});
+  const converter = new showdown.Converter({
+    metadata: true,
+    headerLevelStart: 2,
+  });
   const contentHtml = converter.makeHtml(fileContents);
-  const metadata = converter.getMetadata(true) as showdown.Metadata;
+  const metadata = converter.getMetadata() as showdown.Metadata;
 
   return {
     id,
