@@ -4,5 +4,9 @@
 
 a {
     @apply underline underline-offset-4 text-sky-600 hover:text-sky-800 visited:text-purple-600
- }
+}
+
+footer a {
+    @apply text-gray-400 hover:text-sky-800 visited:text-gray-400
+}
 

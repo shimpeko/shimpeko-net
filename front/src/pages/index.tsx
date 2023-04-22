@@ -30,12 +30,6 @@ export default function Home() {
         </div>
         <div className="my-8"><Link href='https://www.linkedin.com/in/shimpeko/'>CV (Linkedin)</Link></div>
       </main>
-      <footer className='max-w-screen-lg mx-auto px-4 mb-8 flex justify-end space-x-4'>
-        <Link href='https://gitlab.com/shimpeko'><Image src='/gitlab_icon.svg' alt='Gitlab' width={16} height={16} /></Link>
-        <Link href='https://github.com/shimpeko'><Image src='/github_icon.svg' alt='Github' width={16} height={16} /></Link>
-        <Link href='https://twitter.com/shimpeikodama'><Image src='/twitter_icon.svg' alt='Twitter' width={16} height={16} /></Link>
-        <Link href='https://www.linkedin.com/in/shimpeko/'><Image src='/linkedin_icon.svg' alt='LinkedIn' width={16} height={16} /></Link>
-      </footer>
     </>
   );
 }
