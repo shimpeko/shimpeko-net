@@ -29,6 +29,7 @@ export default function Home() {
           cooking and programming.
         </div>
         <div className="my-8"><Link href='https://www.linkedin.com/in/shimpeko/'>CV (Linkedin)</Link></div>
+        <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/16967037/activity-summary/0ed62664545ed0abd2035f7186136b16bbebc0d9'></iframe>
       </main>
     </>
   );
