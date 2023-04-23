@@ -7,11 +7,16 @@ const postsDirectory = path.join(process.cwd(), "posts");
 
 export function getAllPostIds(): string[] {
   const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => fileName.replace(/\.md$/, ""));
+  return fileNames.map((fileName) => fileName.replace(/\.md$/, "").replace(/^\d{8}_/, ""));
 }
 
 export async function getPostData(id: string): Promise<object> {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const postFileNames = fs.readdirSync(postsDirectory);
+  const postFileName = postFileNames.find((postFileName) => postFileName.replace(/\.md$/, "").replace(/^\d{8}_/, "") === id);
+  if (!postFileName) {
+    throw new Error(`No file found for id: ${id}`);
+  }
+  const fullPath = path.join(postsDirectory, postFileName);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const converter = new showdown.Converter({
     metadata: true,
