@@ -37,7 +37,7 @@ export default function Home() {
           height="454"
           width="300"
           frameBorder="0"
-          allowTransparency="true"
+          allowTransparency={true}
           scrolling="no"
           src="https://www.strava.com/athletes/16967037/latest-rides/0ed62664545ed0abd2035f7186136b16bbebc0d9"
         ></iframe>
